@@ -1,0 +1,14 @@
+.grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+.card {
+	font-family: 'Roboto';
+	border: 1px solid black;
+	padding: .2em .5em;
+	margin-right: 0.5em;
+}
+
+.card-title {
+	font-family: 'Redressed';
+}

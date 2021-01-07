@@ -1,11 +1,12 @@
 import React from 'react';
+import './Recipe.css';
 
 
 
 
 const Recipe = (props) => (
-	<div>
-		<h2>{props.title}</h2>
+	<div className="card">
+		<h4 className="card-title">{props.title}</h4>
 		<ul>
 			{props.list.map(item => <li key={item.id} >{item.item}</li>)}
 		</ul>
@@ -14,3 +15,5 @@ const Recipe = (props) => (
 );
 
 export default Recipe;
+
+

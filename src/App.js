@@ -1,5 +1,7 @@
 import React from 'react';
 import Recipe from './Components/Recipes/Recipe';
+import Stars from './Components/Star/Star';
+import Demo from './Components/Demo/Demo';
 
 const data = [
 	{
@@ -39,10 +41,20 @@ const data = [
 
 const foods = data.map( item => <Recipe key={item.id} title={item.title} list={item.list} summary={item.summary} />);
 
+
+// const ObjectLiteral = ( {name} ) => {
+// 	return name;
+// };
+
+
+
+
 const App = () => {
 	return(
-		<div>
+		<div className="grid">
 			{foods}
+			<Stars />
+			<Demo name='Module Name' />
 		</div>
 	);
 };
