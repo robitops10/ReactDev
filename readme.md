@@ -1,35 +1,30 @@
-##### ------------------------[ React Development (Testing) ]--------------------------------
+### ------------------------[ React Development (Testing) ]--------------------------------
 
 > I am learning _React_  
-> thats it
 
 
 ###### Common Taks:
-- __Recipe:__ 
-	- Print Similer Component multiple time
-___
+	- __Recipe:__ 
+		- Print Similer Component multiple time
 
 
-- __Star:__
-	- Handling Star Rating System into application
-___
+	- __Star:__
+		- Handling Star Rating System into application
 
 
-- __Color:__
-	- un-completed
-___
+	- __Color:__
+		- un-completed
 
 
-- __FetchData: (Exciting One)__
-	- Fetch Data By React
-	- Storing required Data into localStorage (cache)
-	- Handling 3 state of Asynchronous Request ( loading, resolved, error )
-	- Creating Custom Moduler Component
-		- Creating Custom hooks `useFetch`
-		- Handle 3 State into `Fetch` Component from `useFetch` Hooks
-		- Creating `GitHubUser` Component from `Fetch` Component
-		- Finally import into `App` Component.
-___
+	- __FetchData: (Exciting One)__
+		- Fetch Data By React
+		- Storing required Data into localStorage (cache)
+		- Handling 3 state of Asynchronous Request ( loading, resolved, error )
+		- Creating Custom Moduler Component
+			- Creating Custom hooks `useFetch`
+			- Handle 3 State into `Fetch` Component from `useFetch` Hooks
+			- Creating `GitHubUser` Component from `Fetch` Component
+			- Finally import into `App` Component.
 
 
 ###### Learn Some New Features
