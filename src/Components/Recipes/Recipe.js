@@ -2,8 +2,6 @@ import React from 'react';
 import './Recipe.css';
 
 
-
-
 const Recipe = (props) => (
 	<div className="card">
 		<h4 className="card-title">{props.title}</h4>

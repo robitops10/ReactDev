@@ -1,3 +1,12 @@
-// This file used for NodeJS Server
+const axios = require('axios');
+let faker = require('faker');
 
-console.log( 'Server "back-end" code gose here ');
+
+
+const bigList = [...Array(5)].map( () => ({
+	name: faker.name.findName(),
+	email: faker.internet.email(),
+	avatar: faker.internet.avatar()
+}));
+
+console.log( bigList );

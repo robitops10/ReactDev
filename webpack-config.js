@@ -7,13 +7,14 @@ const destination = path.resolve( __dirname, 'dist');
 
 module.exports = {
 	mode: 'development',
+	devtool: 'eval-cheap-module-source-map',
+
 	devServer: {
 		contentBase: destination,
 		port: 9999,
 		open: true,																						// => Open Browser (+By Default refresh)
 		overlay: true 																				// Enable WDS, Solve SDS Error
 	},
-
 
 	entry: './src/index.js',
 	output: {
@@ -27,7 +28,7 @@ module.exports = {
 				use: ['style-loader', 'css-loader']
 			},
 			{
-				test: /\.(js|jsx)/,
+				test: /\.jsx?$/,
 				exclude: /node_modules/,
 				use: {
 					loader: 'babel-loader',
@@ -36,6 +37,10 @@ module.exports = {
 					}
 				}
 			}
+			// {
+			// 	test: /\.json$/,
+   //  		use: ['json-loader']
+			// }
 		]
 	},
 	plugins: [
