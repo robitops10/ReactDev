@@ -4,19 +4,19 @@
 
 
 ###### Common Taks:
-	- __Recipe:__ 
+	Recipe: 
 		- Print Similer Component multiple time
 
 
-	- __Star:__
+	Star:
 		- Handling Star Rating System into application
 
 
-	- __Color:__
+	Color:
 		- un-completed
 
 
-	- __FetchData: (Exciting One)__
+	FetchData: (Exciting One)
 		- Fetch Data By React
 		- Storing required Data into localStorage (cache)
 		- Handling 3 state of Asynchronous Request ( loading, resolved, error )
