@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import Recipe from './Components/Recipes/Recipe';
 import Stars from './Components/Star/Star';
 import ColorList from './Components/Color/ColorList';
-import AddColorForm from './Components/Color/AddColorForm';
 import Demo from './Components/Demo/Demo';
 
 import { v4 } from "uuid";
@@ -83,14 +82,6 @@ const App = () => {
 				<Stars />
 
 				<ColorList colors={colors} />
-				<AddColorForm
-					onNewColor={ 
-						(title, color) => {
-							const newColors = [ ...colors, { id: v4(), rating: 0, title, color } ];
-							setColors(newColors);
-						}
-					}
-				/>
 
 			</div>
 		</div>

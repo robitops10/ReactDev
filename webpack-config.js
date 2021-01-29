@@ -16,7 +16,8 @@ module.exports = {
 		overlay: true 																				// Enable WDS, Solve SDS Error
 	},
 
-	entry: './src/index.js',
+	// entry: './src/index.js',
+	entry: ['babel-polyfill', './src/index.js'],
 	output: {
 		path: destination,
 		filename: 'main.js'
@@ -33,14 +34,11 @@ module.exports = {
 				use: {
 					loader: 'babel-loader',
 					options: {
- 	          presets: ['@babel/preset-env', '@babel/preset-react']
+ 	          presets: ['@babel/preset-env', '@babel/preset-react'],
+ 	          plugins: ['@babel/plugin-transform-runtime']
 					}
 				}
 			}
-			// {
-			// 	test: /\.json$/,
-   //  		use: ['json-loader']
-			// }
 		]
 	},
 	plugins: [
@@ -51,6 +49,7 @@ module.exports = {
 			favicon: './src/template/favicon.ico',
 			minify: false,
 			filename: 'index.html'
-		})
+		}),
+
 	]
 };

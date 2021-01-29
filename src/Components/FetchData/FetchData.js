@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 
-
-
 const FetchData = ({login}) => {
 	const [ data, setData ] = useState();
 	const [ error, setError ] = useState();
@@ -73,7 +71,7 @@ export default FetchData;
 
 // 	if (data) return <pre> {JSON.stringify(data, null, 2)} </pre>;
 
-// 	return null; 																							// I don't know why it used, error & data value capture before it.
+// 	return null; 																							// Remember function must return something
 // };
 
 // export default FetchData;
@@ -118,7 +116,7 @@ export default FetchData;
 // 	console.log( localStorage );
 // 	if (data) return <pre> {JSON.stringify(data, null, 2)} </pre>;
 
-// 	return null; 																							// I don't know why it used, error & data value capture before it.
+// 	return null; 																							// Remember function must return something
 // };
 
 // export default FetchData;

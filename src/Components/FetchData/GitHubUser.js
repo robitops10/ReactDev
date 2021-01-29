@@ -21,10 +21,12 @@ const userDetails = ( {data} ) => {
 
 const GitHubUser = ( {login} ) => {
 	return(
-		<Fetch 
-			uri={`https://api.github.com/users/${login}`} 
-			renderSuccess={userDetails} 											// this function called by Fetch Function & pass an argument 
-		/>
+		<div>
+			{
+				// <Fetch uri={`https://api.github.com/users/${login}`} renderSuccess={userDetails} />
+			}
+			Return
+		</div>
 	);
 };
 
