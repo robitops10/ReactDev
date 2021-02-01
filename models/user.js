@@ -29,21 +29,27 @@ const schema = new mongoose.Schema({
 		minlength: 4,	
 	},
 
-	createdAt: {
-		type: Date,
-		default: new Date()
-	},
 	tokens: [{
 		token: {
 			type: String,
 			required: true
 		}
 	}]
+
+}, {
+	timestamps: true 						// Create 2 fields, create timestamp, and update timestamp
 });
 
 
-schema.methods.getData = function (next) {
-// schema.methods.toJSON = function (next) {
+
+
+schema.virtual('tasks', {
+	ref: 'Task',
+	localField: '_id',
+	foreignField: 'user'
+});
+
+schema.methods.toJSON = function (next) {
 	const userObj = this.toObject();
 
 	delete userObj.password;
@@ -51,6 +57,7 @@ schema.methods.getData = function (next) {
 
 	return userObj;
 }
+
 
 
 schema.methods.generateAuthToken = async function () {
@@ -70,11 +77,12 @@ schema.methods.generateAuthToken = async function () {
 schema.statics.loginByCredientials = async ( email, password ) => {
 	const user = await User.findOne({email}); 						// Has access of User Model by how ?
 
-	// if(!user) return new Error('No User find');
 	if(!user) return console.log('No User find');
 
+
+
 	const isMatched = await bcrypt.compare(password, user.password);
-	if( !isMatched ) return console.log('Login Faild');
+	if( !isMatched ) return console.log('Password Missmatched Error');
 
 	return user;
 };

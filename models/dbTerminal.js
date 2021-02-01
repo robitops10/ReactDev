@@ -3,5 +3,6 @@ use task-manager-api
 // show dbs;
 // show collections
 db.dropDatabase()
+// db.users.find()
 
 

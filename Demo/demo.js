@@ -1,9 +1,12 @@
-const obj = {
-	// name: 'android',
-	// toJSON : () => 'Hello'
-};
 
-obj.toJSON = () => 'Hello';
+const sort = {};
 
-const data = JSON.stringify( obj );
-console.log( data )
+
+const query = 'createdAt:des';
+
+const parts = query.split(':');
+sort[ parts[0] ] = parts[1] === 'desc' ? -1 : 1;
+
+
+console.log( parts )
+console.log( sort )

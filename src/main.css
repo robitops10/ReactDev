@@ -1,3 +1,8 @@
 body {
 	text-align: center;
 }
+
+.isActive {
+	font-weight: bold;
+	color: red;
+}
